@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Navbar, NavbarBrand} from 'reactstrap';
 
 class App extends Component {
-
-  constructor(props){
-    super(props);
-    this.onHandleChange = this.onHandleChange.bind(this);
-  }
-
-  onHandleChange(event){
-    
-  }
 
   render() {
     return (
       <div className="App">
+        <Navbar dark color="primary">
+          <div className="container">
+            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+          </div>
+        </Navbar>
       </div>
     );
   }
