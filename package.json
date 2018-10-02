@@ -2,13 +2,16 @@
   "name": "coursera-react",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://raghav555.github.io/coursera-react",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-popper": "^0.9.2",
+    "react-redux": "^5.0.7",
     "react-scripts": "1.1.5",
-    "reactstrap": "^5.0.0"
+    "reactstrap": "^5.0.0",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",

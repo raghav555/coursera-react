@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Navbar, NavbarBrand} from 'reactstrap';
-import Menu from './components/MenuComponent';
 import Main from './components/MainComponent';
-import {DISHES} from './shared/dishes.js'
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
+import { Provider } from 'react-redux';
+import { ConfigureStore } from './redux/configureStore';
+
+const store = ConfigureStore();
 
 class App extends Component {
 
-  constructor(props){
-    super(props);
-    this.state = {
-      dishes: DISHES
-    }
-  }
-
-  render() {
+render() {
       return(
-        <div className="App">
-          <Menu dishes = {this.state.dishes} />
-        </div>
+        <Provider store = {store}>
+            <BrowserRouter>
+              <div>
+                <Main />
+              </div>
+            </BrowserRouter>
+        </Provider>
       );
     }  
 }
